@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Arpita Anand Patil | BCA Student Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,700;1,500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --white:#ffffff; --smoke:#f4f5f9; --blue:#cfe6fa; --blue-d:#5b9bd5;
+  --pink:#ffd3e4; --pink-d:#d9638f; --ink:#26304a; --muted:#66708a;
+  --card:#ffffffcc; --line:#e3e8f2;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--white:#171b2a;--smoke:#1d2234;--blue:#25405e;--blue-d:#8cc3f2;--pink:#5a2c42;--pink-d:#ff9bc0;--ink:#eef1fa;--muted:#aab3cb;--card:#232941cc;--line:#323a57}
+}
+:root[data-theme="dark"]{--white:#171b2a;--smoke:#1d2234;--blue:#25405e;--blue-d:#8cc3f2;--pink:#5a2c42;--pink-d:#ff9bc0;--ink:#eef1fa;--muted:#aab3cb;--card:#232941cc;--line:#323a57}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;margin:0}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--smoke);color:var(--ink);line-height:1.65;overflow-x:hidden}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;line-height:1.15}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--pink-d);outline-offset:3px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;display:flex;justify-content:center;gap:6px;flex-wrap:wrap;padding:12px;background:var(--card);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav a{text-decoration:none;padding:6px 14px;border-radius:999px;font-weight:500;font-size:.95rem;transition:background .25s,transform .25s}
+nav a:hover{background:var(--pink);transform:translateY(-2px)}
+section{max-width:960px;margin:auto;padding:72px 22px}
+h2{font-size:2rem;margin-bottom:28px}
+h2::after{content:"";display:block;width:56px;height:5px;border-radius:5px;margin-top:10px;background:linear-gradient(90deg,var(--pink-d),var(--blue-d))}
+
+/* hero */
+.hero{position:relative;min-height:88vh;display:grid;place-items:center;text-align:center;overflow:hidden;background:linear-gradient(160deg,var(--white),var(--smoke) 60%,var(--blue))}
+.blob{position:absolute;border-radius:50%;filter:blur(40px);opacity:.75;animation:float 12s ease-in-out infinite}
+.b1{width:340px;height:340px;background:var(--pink);top:-60px;left:-80px}
+.b2{width:300px;height:300px;background:var(--blue);bottom:-60px;right:-60px;animation-delay:-4s}
+.b3{width:180px;height:180px;background:var(--pink);bottom:20%;left:55%;animation-delay:-8s;opacity:.5}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,-34px) scale(1.12)}}
+.hero-inner{position:relative;padding:30px 22px}
+.hello{display:inline-block;padding:6px 18px;border-radius:999px;background:var(--white);border:1px solid var(--line);color:var(--pink-d);font-weight:700;margin-bottom:18px;animation:drop .8s both}
+.hero h1{font-size:clamp(2.6rem,9vw,5.6rem);font-weight:700}
+.hero h1 span{display:inline-block;animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
+.hero h1 span:nth-child(2){animation-delay:.18s;color:var(--blue-d);font-style:italic}
+.hero h1 span:nth-child(3){animation-delay:.36s;color:var(--pink-d)}
+.role{margin-top:20px;font-size:1.2rem;color:var(--muted);animation:drop 1s .7s both}
+.role b{color:var(--ink)}
+.btns{margin-top:30px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;animation:drop 1s .95s both}
+.btn{padding:12px 26px;border-radius:999px;text-decoration:none;font-weight:700;transition:transform .25s,box-shadow .25s}
+.btn.p{background:var(--pink-d);color:#fff}
+.btn.s{background:var(--white);border:2px solid var(--blue-d)}
+.btn:hover{transform:translateY(-4px);box-shadow:0 10px 24px -8px var(--pink-d)}
+@keyframes rise{from{opacity:0;transform:translateY(50px) rotate(3deg)}to{opacity:1;transform:none}}
+@keyframes drop{from{opacity:0;transform:translateY(-14px)}to{opacity:1;transform:none}}
+
+/* about */
+.about{display:grid;gap:26px;grid-template-columns:1fr 1.5fr;align-items:center}
+.avatar{aspect-ratio:1;max-width:260px;margin:auto;border-radius:42% 58% 55% 45%/50% 45% 55% 50%;display:grid;place-items:center;font-family:'Fraunces',serif;font-size:5rem;font-weight:700;color:var(--white);background:linear-gradient(135deg,var(--pink-d),var(--blue-d));animation:morph 9s ease-in-out infinite}
+@keyframes morph{50%{border-radius:55% 45% 40% 60%/45% 55% 45% 55%}}
+.about p{font-size:1.1rem}
+.facts{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.facts span{padding:6px 14px;border-radius:12px;background:var(--blue);font-size:.92rem}
+
+/* education timeline */
+.tl{position:relative;padding-left:28px;border-left:3px dashed var(--blue-d)}
+.item{position:relative;margin-bottom:22px;padding:20px 22px;border-radius:20px;background:var(--card);border:1px solid var(--line);transition:transform .3s,box-shadow .3s}
+.item:hover{transform:translateX(8px);box-shadow:0 14px 30px -18px var(--blue-d)}
+.item::before{content:"";position:absolute;left:-39px;top:26px;width:16px;height:16px;border-radius:50%;background:var(--pink-d);border:4px solid var(--smoke)}
+.item.now::before{animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 var(--pink-d)}100%{box-shadow:0 0 0 16px transparent}}
+.item h3{font-size:1.25rem}
+.item p{color:var(--muted)}
+.score{display:inline-block;margin-top:8px;padding:3px 14px;border-radius:999px;background:var(--pink);font-weight:700}
+.score.now{background:var(--blue)}
+
+/* skills */
+.chips{display:flex;flex-wrap:wrap;gap:12px}
+.chip{padding:12px 24px;border-radius:999px;background:var(--white);border:2px solid var(--line);font-weight:700;transition:transform .25s,background .25s,border-color .25s;cursor:default}
+.chip:nth-child(odd):hover{background:var(--pink);border-color:var(--pink-d)}
+.chip:nth-child(even):hover{background:var(--blue);border-color:var(--blue-d)}
+.chip:hover{transform:translateY(-6px) rotate(-2deg)}
+
+/* hobbies */
+.hob{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+.hcard{padding:28px 20px;text-align:center;border-radius:26px;background:var(--pink);transition:transform .3s}
+.hcard:nth-child(2){background:var(--blue)}
+.hcard:hover{transform:translateY(-8px) scale(1.03)}
+.hcard .e{font-size:2.6rem;display:block;animation:bob 3s ease-in-out infinite}
+.hcard:nth-child(2) .e{animation-delay:-1s}.hcard:nth-child(3) .e{animation-delay:-2s}
+@keyframes bob{50%{transform:translateY(-8px) rotate(6deg)}}
+.hcard h3{margin-top:8px}
+
+footer{text-align:center;padding:34px 20px 44px;color:var(--muted);background:var(--white);border-top:1px solid var(--line)}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:700px){.about{grid-template-columns:1fr}section{padding:56px 18px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<nav aria-label="Main">
+  <a href="#home">Home</a><a href="#about">About</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#hobbies">Hobbies</a>
+</nav>
+
+<header class="hero" id="home">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+  <div class="hero-inner">
+    <div class="hello">Hi, I'm</div>
+    <h1><span>Arpita</span> <span>Anand</span> <span>Patil</span></h1>
+    <p class="role">BCA student at <b>SKE BCA College, Chandgad</b></p>
+    <div class="btns">
+      <a class="btn p" href="#education">See my education</a>
+      <a class="btn s" href="#skills">View my skills</a>
+    </div>
+  </div>
+</header>
+
+<section id="about" class="reveal">
+  <h2>About me</h2>
+  <div class="about">
+    <div class="avatar" aria-hidden="true">AP</div>
+    <div>
+      <p>I'm a BCA student who enjoys learning how software works, from the way a computer is built to the programs that run on it. I'm currently in my 2nd year, semester 3, and I like turning what I learn in class into small projects.</p>
+      <div class="facts"><span>BCA 2nd year</span><span>Semester 3</span><span>Chandgad, Maharashtra</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="education" class="reveal">
+  <h2>Education</h2>
+  <div class="tl">
+    <div class="item now">
+      <h3>BCA, 2nd year (Semester 3)</h3>
+      <p>SKE BCA College, Chandgad</p>
+      <span class="score now">Currently pursuing</span>
+    </div>
+    <div class="item">
+      <h3>12th (Higher Secondary)</h3>
+      <p>Dhananjay Junior College, Naganwadi</p>
+      <span class="score">63%</span>
+    </div>
+    <div class="item">
+      <h3>10th (Secondary)</h3>
+      <p>Dhananjay Vidyalaya, Naganwadi</p>
+      <span class="score">89%</span>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="reveal">
+  <h2>Technical skills</h2>
+  <div class="chips">
+    <div class="chip">HTML</div><div class="chip">CSS</div><div class="chip">Bootstrap</div>
+    <div class="chip">C</div><div class="chip">Java</div><div class="chip">Python</div>
+    <div class="chip">Computer Architecture</div>
+  </div>
+</section>
+
+<section id="hobbies" class="reveal">
+  <h2>Hobbies</h2>
+  <div class="hob">
+    <div class="hcard"><span class="e">🎯</span><h3>Lagori</h3></div>
+    <div class="hcard"><span class="e">💃</span><h3>Dancing</h3></div>
+    <div class="hcard"><span class="e">🎤</span><h3>Singing</h3></div>
+  </div>
+</section>
+
+<footer>© <span id="y"></span> Arpita Anand Patil</footer>
+
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+const els=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+  els.forEach(el=>io.observe(el));
+}else{els.forEach(el=>el.classList.add('in'))}
+</script>
+</body>
+</html>
